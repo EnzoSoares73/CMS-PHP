@@ -1,0 +1,29 @@
+{
+	"db_exceptions":[
+		"The strings inside quotation",
+		"marks will not be showed in the",
+		"menu, so they won't be managed by the framework",
+		"permissoes"
+	],
+	"images": ["columns registred inside one of these",
+	"strings will be treated as columns destined ",
+	"to store image addresses",
+	"image",
+	"image2"
+	],
+	"required": ["columns registred inside one of these",
+	"strings will be treated as required columns"
+	],
+	"password": ["columns registred inside one of these",
+	"strings will be treated as password columns",
+	"password"
+	],
+	"salt": ["a column registred inside one of these",
+	"strings will be treated as a salt column for password safety",
+	"salt"
+	],
+	"disabled": ["columns registred inside one of these",
+	"strings will be treated as disabled columns",
+	"disabled"
+	]
+}
