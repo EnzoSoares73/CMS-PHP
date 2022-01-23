@@ -37,7 +37,7 @@
     				<p><?php echo $value[$columnName];?></p>
     			<?php endforeach;?>
             <?php endforeach; ?>
-         	<a href="templateDelete.php?id=<?php echo $id?>&table=<?php echo $tbl_name; ?>" >Delete</a>
+         	<a href="templateDelete.php?id=<?php echo $id?>&table=<?php echo $tbl_name; ?>">Deletar</a>
     
     </body>
     

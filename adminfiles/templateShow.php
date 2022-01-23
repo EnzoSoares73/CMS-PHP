@@ -26,7 +26,7 @@
 <html>
 
 	<head>
-		<title>Show</title>
+		<title>Todas as entradas</title>
 	
 	</head>
 
@@ -47,8 +47,8 @@
                     <tr>
                     	<td><?php echo $tableValue['id']?></td>
                         <td><?php echo $tableValue['name']?></td>
-						<td><a href="templateDelete.php?id=<?php echo $tableValue['id']?>&table=<?php echo $tbl_name; ?>" >Delete</a></td>
-						<td><a href="templateShowAll.php?id=<?php echo $tableValue['id']?>&table=<?php echo $tbl_name; ?>" >Show</a></td>
+						<td><a href="templateDelete.php?id=<?php echo $tableValue['id']?>&table=<?php echo $tbl_name; ?>">Deletar</a></td>
+						<td><a href="templateShowAll.php?id=<?php echo $tableValue['id']?>&table=<?php echo $tbl_name; ?>">Mostrar</a></td>
 						
 						
                     </tr>
@@ -57,7 +57,7 @@
         	</table>
         	
         	<br>
-        	<a href="TemplateAdd.php?table=<?php echo $tbl_name; ?>">Add</a><!-- sends the table id attached to the add link-->
+        	<a href="TemplateAdd.php?table=<?php echo $tbl_name; ?>">Adicionar</a><!-- sends the table id attached to the add link-->
         	<br>
 
 	
