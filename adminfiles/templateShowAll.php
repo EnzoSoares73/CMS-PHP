@@ -21,24 +21,21 @@
     $myConnection=null;
 ?>
     
-    <html>
-    
-        <head>
-        <title>Add</title>
-        
-        </head>
-    
-    <body>
-        
-        
-            <?php foreach ($columnNames as $columnName) : ?>
-    			<h3><?php echo ucwords($columnName); ?></h3>
-    			<?php foreach ($values as $value):?>
-    				<p><?php echo $value[$columnName];?></p>
-    			<?php endforeach;?>
-            <?php endforeach; ?>
-         	<a href="templateDelete.php?id=<?php echo $id?>&table=<?php echo $tbl_name; ?>">Deletar</a>
-    
-    </body>
-    
+<html lang="pt-br">
+
+    <?php include_once "head.html"?>
+
+    <?php include_once "background1.html"?>
+
+        <?php foreach ($columnNames as $columnName) : ?>
+            <h3><?php echo ucwords($columnName); ?></h3>
+            <?php foreach ($values as $value):?>
+                <p><?php echo $value[$columnName];?></p>
+            <?php endforeach;?>
+        <?php endforeach; ?>
+        <a href="templateDelete.php?id=<?php echo $id?>&table=<?php echo $tbl_name; ?>">Deletar</a>
+
+    <?php include_once "background2.html"?>
+
+
 </html> 

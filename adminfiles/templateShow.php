@@ -23,14 +23,11 @@
     
 ?>
 
-<html>
+<html lang="pt-br">
 
-	<head>
-		<title>Todas as entradas</title>
-	
-	</head>
+    <?php include_once "head.html"?>
 
-	<body>
+    <?php include_once "background1.html"?>
 		
         	<table border="1">
         	
@@ -60,7 +57,7 @@
         	<a href="TemplateAdd.php?table=<?php echo $tbl_name; ?>">Adicionar</a><!-- sends the table id attached to the add link-->
         	<br>
 
-	
-	</body>
-	
+
+    <?php include_once "background2.html"?>
+
 </html>

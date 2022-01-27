@@ -45,16 +45,13 @@
 
 ?>
 
-<html> 
-    
-    <head>
-        <title>Adicionar</title>
-    
-    </head>
+<html lang="pt-br">
 
-	<body>
+    <?php include_once "head.html"?>
+
+    <?php include_once "background1.html"?>
+
         <form action="processAdd.php?table=<?php echo $tbl_name;?>" method="post" enctype="multipart/form-data">
-            	
                 <?php foreach ($columnNames as $columnName) : ?>
                 	<?php if ($columnName != "id"):?>
     					<label><?php echo ucwords($columnName); ?></label>
@@ -63,10 +60,9 @@
                 			<?php echo isRequiredOrDisabled($columnName, $exceptions)?>><br>
                 	<?php endif; ?>
                 <?php endforeach; ?>
-            	
             <input type="submit" name=submit value="Submit"/>
         </form>
-    
-    </body>
+
+    <?php include_once "background2.html"?>
     
 </html> 

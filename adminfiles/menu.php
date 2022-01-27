@@ -16,13 +16,11 @@
 
 ?>
 
-<html> 
+<html lang="pt-br">
     
-    <head>
-        <title>Menu</title>
-    </head>
-    
-    <body>
+    <?php include_once "head.html"?>
+
+    <?php include_once "background1.html"?>
     
     	<ul>
 			<?php foreach ($resultArray as $item): ?> <!--  for every database table, verify if it is in the exceptions. If so, it isn't showed -->
@@ -30,10 +28,9 @@
 					<li><a href="templateShow.php?table=<?php echo $item; ?>" ><?php echo $item; ?></a></li><!-- sends the selected table name to templateShow.php-->
 				<?php endif;?>
 			<?php endforeach;?>
-			
     	</ul>
-    
-    </body>
+
+    <?php include_once "background2.html"?>
 
 
     
