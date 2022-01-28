@@ -59,7 +59,7 @@
                 <br>
                 <a href="TemplateAdd.php?table=<?php echo $tbl_name; ?>">Adicionar</a><!-- sends the table id attached to the add link-->
                 <br>
-
+                <a href="menu.php">Menu</a>
 
             </div>
         </div>

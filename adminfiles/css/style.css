@@ -1,7 +1,7 @@
 html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
+    height: 95%;
+    width: 99%;
+    margin: 10;
     background-color: orange;
     display: flex;
     justify-content: center;
@@ -25,6 +25,26 @@ html, body {
     height: 100%;
     line-height: 3em;
     overflow-y: scroll;
-    margin: 0 auto;
+    margin: 100;
     padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: navajowhite;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: orange;
 }

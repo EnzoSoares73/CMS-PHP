@@ -30,13 +30,18 @@
         <div class="center animate-bottom">
             <div class="scrollbox">
 
-            <?php foreach ($columnNames as $columnName) : ?>
-                <h3><?php echo ucwords($columnName); ?></h3>
-                <?php foreach ($values as $value):?>
-                    <p><?php echo $value[$columnName];?></p>
-                <?php endforeach;?>
-            <?php endforeach; ?>
-            <a href="templateDelete.php?id=<?php echo $id?>&table=<?php echo $tbl_name; ?>">Deletar</a>
+                <?php foreach ($columnNames as $columnName) : ?>
+                    <h3><?php echo ucwords($columnName); ?></h3>
+                    <?php foreach ($values as $value):?>
+                        <p><?php echo $value[$columnName];?></p>
+                    <?php endforeach;?>
+                <?php endforeach; ?>
+                <a href="templateDelete.php?id=<?php echo $id?>&table=<?php echo $tbl_name; ?>">Deletar</a>
+
+                <br>
+
+                <a href="menu.php">Menu</a>
+
 
             </div>
         </div>
