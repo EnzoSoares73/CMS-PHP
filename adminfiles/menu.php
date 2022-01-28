@@ -20,17 +20,22 @@
     
     <?php include_once "head.html"?>
 
-    <?php include_once "background1.html"?>
-    
-    	<ul>
-			<?php foreach ($resultArray as $item): ?> <!--  for every database table, verify if it is in the exceptions. If so, it isn't showed -->
-				<?php if (!in_array($item, $exceptions->db_exceptions)):?>
-					<li><a href="templateShow.php?table=<?php echo $item; ?>" ><?php echo $item; ?></a></li><!-- sends the selected table name to templateShow.php-->
-				<?php endif;?>
-			<?php endforeach;?>
-    	</ul>
+    <body id="body">
+        <div class="loader"></div>
+        <div class="center animate-bottom">
+            <div class="scrollbox">
 
-    <?php include_once "background2.html"?>
+                <ul>
+                    <?php foreach ($resultArray as $item): ?> <!--  for every database table, verify if it is in the exceptions. If so, it isn't showed -->
+                        <?php if (!in_array($item, $exceptions->db_exceptions)):?>
+                            <li><a href="templateShow.php?table=<?php echo $item; ?>" ><?php echo $item; ?></a></li><!-- sends the selected table name to templateShow.php-->
+                        <?php endif;?>
+                    <?php endforeach;?>
+                </ul>
+
+            </div>
+        </div>
+    </body>
 
 
     

@@ -27,37 +27,42 @@
 
     <?php include_once "head.html"?>
 
-    <?php include_once "background1.html"?>
-		
-        	<table border="1">
-        	
-        		<thead>
-                    <tr>
-                        <th><?php echo ucwords($columnNames[0])?></th>
-                        <th><?php echo ucwords($columnNames[1])?></th>
-                    </tr>
-                </thead>
-            
-            
-                <?php foreach($tableValues as $tableValue):?> <!-- shows the first two columns of every $tbl_name entry  
-                    and, for every one of those, creates a two links: modify and delete, sending through those links the table and entry ids-->
-                    <tr>
-                    	<td><?php echo $tableValue['id']?></td>
-                        <td><?php echo $tableValue['name']?></td>
-						<td><a href="templateDelete.php?id=<?php echo $tableValue['id']?>&table=<?php echo $tbl_name; ?>">Deletar</a></td>
-						<td><a href="templateShowAll.php?id=<?php echo $tableValue['id']?>&table=<?php echo $tbl_name; ?>">Mostrar</a></td>
-						
-						
-                    </tr>
-                <?php endforeach;?>
-        	
-        	</table>
-        	
-        	<br>
-        	<a href="TemplateAdd.php?table=<?php echo $tbl_name; ?>">Adicionar</a><!-- sends the table id attached to the add link-->
-        	<br>
+    <body id="body">
+        <div class="loader"></div>
+        <div class="center animate-bottom">
+            <div class="scrollbox">
+
+                <table border="1">
+
+                    <thead>
+                        <tr>
+                            <th><?php echo ucwords($columnNames[0])?></th>
+                            <th><?php echo ucwords($columnNames[1])?></th>
+                        </tr>
+                    </thead>
 
 
-    <?php include_once "background2.html"?>
+                    <?php foreach($tableValues as $tableValue):?> <!-- shows the first two columns of every $tbl_name entry
+                        and, for every one of those, creates a two links: modify and delete, sending through those links the table and entry ids-->
+                        <tr>
+                            <td><?php echo $tableValue['id']?></td>
+                            <td><?php echo $tableValue['name']?></td>
+                            <td><a href="templateDelete.php?id=<?php echo $tableValue['id']?>&table=<?php echo $tbl_name; ?>">Deletar</a></td>
+                            <td><a href="templateShowAll.php?id=<?php echo $tableValue['id']?>&table=<?php echo $tbl_name; ?>">Mostrar</a></td>
+
+
+                        </tr>
+                    <?php endforeach;?>
+
+                </table>
+
+                <br>
+                <a href="TemplateAdd.php?table=<?php echo $tbl_name; ?>">Adicionar</a><!-- sends the table id attached to the add link-->
+                <br>
+
+
+            </div>
+        </div>
+    </body>
 
 </html>

@@ -25,17 +25,22 @@
 
     <?php include_once "head.html"?>
 
-    <?php include_once "background1.html"?>
+    <body id="body">
+        <div class="loader"></div>
+        <div class="center animate-bottom">
+            <div class="scrollbox">
 
-        <?php foreach ($columnNames as $columnName) : ?>
-            <h3><?php echo ucwords($columnName); ?></h3>
-            <?php foreach ($values as $value):?>
-                <p><?php echo $value[$columnName];?></p>
-            <?php endforeach;?>
-        <?php endforeach; ?>
-        <a href="templateDelete.php?id=<?php echo $id?>&table=<?php echo $tbl_name; ?>">Deletar</a>
+            <?php foreach ($columnNames as $columnName) : ?>
+                <h3><?php echo ucwords($columnName); ?></h3>
+                <?php foreach ($values as $value):?>
+                    <p><?php echo $value[$columnName];?></p>
+                <?php endforeach;?>
+            <?php endforeach; ?>
+            <a href="templateDelete.php?id=<?php echo $id?>&table=<?php echo $tbl_name; ?>">Deletar</a>
 
-    <?php include_once "background2.html"?>
+            </div>
+        </div>
+    </body>
 
 
 </html> 

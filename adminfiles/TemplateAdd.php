@@ -49,20 +49,26 @@
 
     <?php include_once "head.html"?>
 
-    <?php include_once "background1.html"?>
+    <body id="body">
+        <div class="loader"></div>
+        <div class="center animate-bottom">
+            <div class="scrollbox">
 
-        <form action="processAdd.php?table=<?php echo $tbl_name;?>" method="post" enctype="multipart/form-data">
-                <?php foreach ($columnNames as $columnName) : ?>
-                	<?php if ($columnName != "id"):?>
-    					<label><?php echo ucwords($columnName); ?></label>
-                			<input type='<?php echo verifyName($columnName, $exceptions)?>'
-                			name="<?php echo $columnName; ?>" 
-                			<?php echo isRequiredOrDisabled($columnName, $exceptions)?>><br>
-                	<?php endif; ?>
-                <?php endforeach; ?>
-            <input type="submit" name=submit value="Submit"/>
-        </form>
+            <form action="processAdd.php?table=<?php echo $tbl_name;?>" method="post" enctype="multipart/form-data">
+                    <?php foreach ($columnNames as $columnName) : ?>
+                        <?php if ($columnName != "id"):?>
+                            <label><?php echo ucwords($columnName); ?></label>
+                                <input type='<?php echo verifyName($columnName, $exceptions)?>'
+                                name="<?php echo $columnName; ?>"
+                                <?php echo isRequiredOrDisabled($columnName, $exceptions)?>><br>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                <input type="submit" name=submit value="Submit"/>
+            </form>
 
-    <?php include_once "background2.html"?>
-    
+            </div>
+        </div>
+    </body>
+
+
 </html> 
